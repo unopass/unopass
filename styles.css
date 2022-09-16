@@ -31,6 +31,12 @@ span.invert {
     color: black;
 }
 
+span.bold {
+    background-color: transparent;
+    color: inherit;
+    font-weight: bold;
+}
+
 nav {
     background: #000;
     padding: 0 10%;
@@ -57,6 +63,13 @@ nav h1 {
     margin: auto 0;
 }
 
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
 
 .gradient {
     background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
@@ -138,6 +151,25 @@ main {
     font-size: min(3vw, 1rem);
 }
 
+button.special {
+    padding: 10px;
+    margin: 5px;
+    border: 3px solid #15539E;
+    border-radius: 10px;
+    color: white;
+    background-color: #15539E;
+    box-shadow: 5px 5px 0 0 #d82121;
+    height: 50px;
+    min-width: 200px;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+}
+
+button.special:hover {
+    box-shadow: 5px 5px 0 0 black;
+}
+
 /* Other Sections */
 
 .center {
@@ -159,7 +191,8 @@ main {
     border: 2px solid  black;
 }
 
-/* Article Section #How */
+
+/* Article */
 
 article {
     color: black;
@@ -172,28 +205,42 @@ article {
     padding: 0 20px;
 }
 
+
+/* Article Section #explained */
+
+
 .flex-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     place-items: center;
+    max-height: 50%;
+    margin: 15px auto;
 }
 
 .flex-item {
     margin: auto;
-    height: 80vh;
     width: 100%;
+    height: 450px;
     margin: 10px;
+    padding: 20px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    gap: 15px;
+    background-color: white;
+    border-radius: 10px;
+    flex: 1;
+    border: 5px solid #15539E;
+    box-shadow: 10px 10px 0 0 black;
 }
 
 .flex-item img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    max-width: 250px;
     object-fit: contain;
+    border-radius: 50%;
+    border: 5px solid #d82121;
 }
 
 @media screen and (max-width: 900px) {
@@ -205,6 +252,14 @@ article {
         margin: 10px auto;
         height: 80vh;
         width: 80%;
+    }
+
+    .sm-text-center {
+        text-align: center;
+    }
+
+    .flex-container {
+        max-height: max-content;
     }
 }
 
